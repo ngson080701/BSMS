@@ -12,7 +12,6 @@ import CustomerRoute from "./src/routers/Customer.route.js";
 import StoreRoute from "./src/routers/Store.route.js";
 import ServiceRoute from "./src/routers/Service.route.js";
 import StaffRoute from "./src/routers/Staff.route.js";
-import PostRoute from "./src/routers/Post.route.js";
 
 const app = express();
 dotenv.config();
@@ -46,8 +45,6 @@ app.use("/api/auth", AuthRoute);
 app.use("/api/customer", CustomerRoute);
 //route for Staff
 app.use("/api/staff", StaffRoute);
-// route for post
-app.use("/api/post", PostRoute);
 
 app.listen(8800, () => {
   console.log("Server is running");
