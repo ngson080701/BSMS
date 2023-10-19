@@ -5,7 +5,6 @@ import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
 import cors from "cors";
-
 // test huan
 // import components
 import AuthRoute from "./src/routers/Auth.route.js";
@@ -13,7 +12,7 @@ import CustomerRoute from "./src/routers/Customer.route.js";
 import StoreRoute from "./src/routers/Store.route.js";
 import ServiceRoute from "./src/routers/Service.route.js";
 import StaffRoute from "./src/routers/Staff.route.js";
-import PostRoute from "./src/routers/Post.route.js";
+
 const app = express();
 dotenv.config();
 const corsOptions = {
@@ -46,8 +45,6 @@ app.use("/api/auth", AuthRoute);
 app.use("/api/customer", CustomerRoute);
 //route for Staff
 app.use("/api/staff", StaffRoute);
-//router post
-app.use("/api/post", PostRoute);
 
 app.listen(8800, () => {
   console.log("Server is running");
